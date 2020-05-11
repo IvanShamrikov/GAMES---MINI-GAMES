@@ -12,9 +12,8 @@ def displayIntro():
 
 def chooseCave():
     cave = ""
-    while cave != "1" or cave !="2":
-        print("В какую пещеру Вы войдёте (введите 1 или 2) ---> ")
-        cave = input()
+    while cave != "1" and cave !="2":
+        cave = input("В какую пещеру Вы войдёте (введите 1 или 2) ---> ")
 
     return cave
 
@@ -40,5 +39,6 @@ while playAgain == "да":
     caveNumber = chooseCave()
     checkCave(caveNumber)
 
+    print()
     print("Хотите сыграть еще раз? (да или нет) --->")
     playAgain = input()

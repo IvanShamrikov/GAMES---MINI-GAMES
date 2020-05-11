@@ -6,8 +6,8 @@ print(f'''
 {"="*50}
 ''')
 while True:
-    answer = input("Enter ROCK/PAPER/SCISSORS --> ")
-    if answer.upper() not in ["ROCK", "PAPER", "SCISSORS"]:
+    answer = input("Enter ROCK/PAPER/SCISSORS --> ").upper()
+    if answer not in ["ROCK", "PAPER", "SCISSORS"]:
         print()
         print("Something went wrong. Let's try one more time.")
         continue
@@ -23,6 +23,6 @@ print()
 if answer == comp_choise:
     print("Draw - no winners")
 elif (answer == "ROCK" and comp_choise == "SCISSORS") or (answer == "PAPER" and comp_choise == "ROCK") or (answer == "SCISSORS" and comp_choise == "PAPER"):
-    print("Player wins!")
+    print(f'''{"="*10} Player wins! {"="*10}''')
 else:
-    print("Computer wins!")
+    print(f'''{"*"*10} Computer wins! {"*"*10}''')
